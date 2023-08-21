@@ -4,8 +4,9 @@ terraform {
       source  = "hashicorp/vsphere"
       version = "2.1.1"
     }
-  }
-  backend "vsphere" {
+    backend "vsphere" {
     disable_checkpoint = true
   }
+  }
+  
 }
