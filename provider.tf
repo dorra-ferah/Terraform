@@ -5,4 +5,7 @@ terraform {
       version = "2.1.1"
     }
   }
+  backend "vsphere" {
+    disable_checkpoint = true
+  }
 }
