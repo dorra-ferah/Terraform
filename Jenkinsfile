@@ -14,6 +14,7 @@ pipeline {
         
          stage("terraform2") {
             steps {
+            sh 'rm -f terraform.tfstate terraform.tfstate.backup'
                 sh "terraform init"
                 sh "terraform plan"
                 sh "terraform apply -auto-approve"
